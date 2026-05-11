@@ -1,0 +1,22 @@
+services:
+  soap-client:
+    build:
+      context: soap-client
+    container_name: soap-client
+    ports:
+      - "8000:8000"
+    networks:
+      - internal
+
+  soap-server:
+    build:
+      context: soap-server
+    container_name: soap-server
+    ports:
+      - "8001:8001"
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge

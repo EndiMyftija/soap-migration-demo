@@ -1,3 +1,5 @@
 spring:
   application:
     name: soap-server
+server:
+  port: ${PORT:8001}
